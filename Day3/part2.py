@@ -16,8 +16,7 @@ def get_num_trees(bigmap):
     while sum(y) < 5* (len(bigmap) - 1):
         for i, (xmove, ymove) in enumerate(moves):
             if x[i] + xmove > len(bigmap[0]) - 1:
-                minus = len(bigmap[0]) - 1 - x[i]
-                x[i] = xmove - minus - 1
+                x[i] = xmove - (len(bigmap[0]) - 1) % x[i] - 1
             else:
                 x[i] += xmove
             if y[i] < len(bigmap) - 1 and y[i] + ymove <= len(bigmap) - 1:
