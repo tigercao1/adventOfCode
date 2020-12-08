@@ -45,7 +45,6 @@ def find(bagmap, curr):
         curr_count += int(count) + int(count) * find(bagmap, key)
     
     return curr_count
-    
 
 def count_bags(bagmap):
     return find(bagmap, "shiny gold")
