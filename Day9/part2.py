@@ -29,9 +29,7 @@ def find_sum(arr):
     invalid = find_invalid(arr)
     p1, p2 = 0, 1
     curr_sum = arr[p1] + arr[p2]
-    iterations = 0
     while p2 < len(arr)-1:
-        iterations += 1
         if curr_sum < invalid:
             p2 += 1
             curr_sum += arr[p2]
@@ -39,7 +37,6 @@ def find_sum(arr):
             curr_sum -= arr[p1]
             p1 += 1
         else:
-            print(iterations)
             return arr[p1:p2+1]
     return []
 
